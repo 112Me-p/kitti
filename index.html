@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#eeeae3" />
+  <meta name="description" content="KITTI / กิตติฯ — THE FIRST DROP. เสื้อวงรุ่นแรก Oversized Cotton 100% จำนวนจำกัด 50 ตัว เลือกสีและไซซ์ สั่งพรีออเดอร์ผ่าน LINE OA" />
+  <title>KITTI — THE FIRST DROP / 001</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="config.js"></script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"}}</script>
+</head>
+<body>
+  <div class="announcer" id="announcement"><span class="live-dot"></span> DROP 001 / LIMITED TO 50 PIECES <span class="ann-separator">—</span> PRE-ORDER IS OPEN</div>
+  <header class="header" id="top">
+    <a class="brand" href="#top" aria-label="KITTI home"><span class="brand-th">กิตติฯ</span><span class="brand-en">KITTI / OFFICIAL MERCH</span></a>
+    <nav class="desktop-nav" aria-label="Main"><a href="#collection">COLLECTION</a><a href="#story">THE STORY</a><a href="#details">DETAILS</a></nav>
+    <div class="nav-actions"><span class="header-note">FIRST DROP — 2026</span><button type="button" class="bag-button" data-open-cart aria-label="เปิดตะกร้า">BAG <span id="bag-count">0</span></button></div>
+  </header>
+  <main>
+    <section class="intro-line" aria-label="Collection title"><span>INDEPENDENT MUSIC / INDEPENDENT SPIRIT</span><span>01 — 03 / COLLECTION</span></section>
+    <section class="showroom" id="collection">
+      <div class="stage-area">
+        <div class="stage-heading"><div class="eyebrow"><span class="pill-dot"></span> THE FIRST COLLECTION / 001</div><h1>NOT JUST A <em>T-SHIRT.</em></h1><p>เสียงเพลง ความทรงจำ และเรื่องราวที่อยากส่งต่อ</p></div>
+        <div class="stage" id="stage" aria-label="3D interactive wardrobe">
+          <canvas id="stage-canvas" aria-label="โมเดลเสื้อ 3D หมุนดูได้ด้วยการลาก"></canvas>
+          <div class="stage-fallback" id="stage-fallback" aria-live="polite"><div class="fallback-rail"></div><div class="fallback-shirts">
+            <button type="button" class="fallback-piece" data-fallback-color="BEIGE"><div class="hanger-shape"></div><img src="assets/beige-front.jpg" alt="เสื้อสีเบจ ด้านหน้า" /></button>
+            <button type="button" class="fallback-piece" data-fallback-color="WHITE"><div class="hanger-shape"></div><img src="assets/white-front.jpg" alt="เสื้อสีขาว ด้านหน้า" /></button>
+            <button type="button" class="fallback-piece" data-fallback-color="BLACK"><div class="hanger-shape"></div><img src="assets/black-front.jpg" alt="เสื้อสีดำ ด้านหน้า" /></button>
+          </div><div class="fallback-note" id="fallback-note">กำลังโหลด 3D MODEL…</div></div>
+          <div class="stage-left-label">[ 3D INTERACTIVE SHOWROOM ]</div>
+          <div class="stage-right-label">COTTON 100% — OVERSIZED 90s</div>
+          <div class="stage-footer"><span class="stage-mode"><span class="control-dot"></span><span id="model-state">LOADING 3D MODEL</span></span><span>DRAG TO ROTATE / CLICK TO SELECT</span></div>
+        </div>
+        <div class="stage-controls"><div class="color-counter"><span class="small-grey">CURRENTLY VIEWING</span><strong id="model-color-text">01 / BEIGE</strong></div><div class="stage-buttons"><button id="previous-color" class="circle-arrow" type="button" aria-label="เสื้อก่อนหน้า">←</button><button id="next-color" class="circle-arrow" type="button" aria-label="เสื้อถัดไป">→</button><button id="reset-view" class="view-button" type="button">RESET VIEW ↗</button></div></div>
+      </div>
+      <aside class="product-panel"><div class="panel-topline"><span>001 / LIMITED EDITION</span><span>MERCHANDISE</span></div><div class="product-content"><div class="status-tag"><span class="live-dot"></span><span id="stock-status-text">PRE-ORDER OPEN</span></div>
+        <h2>THE FIRST<br/>DROP <span>TEE.</span></h2><p class="subtitle">OVERSIZED 90S / GRAPHIC T-SHIRT</p>
+        <p class="product-desc">เสื้อวงรุ่นแรกของกิตติฯ ที่บันทึกเรื่องราวของการค้นพบแสงสว่าง ผ่านงานศิลปะและเสียงเพลง</p>
+        <div class="form-divider"></div>
+        <div class="choice-label"><span>01 / SELECT COLOR</span><b id="chosen-color">BEIGE</b></div>
+        <div class="swatch-row" role="group" aria-label="เลือกสีเสื้อ"><button type="button" class="swatch selected" data-color="BEIGE" aria-label="สีเบจ"><span style="background:#d6c5a7"></span><small>BEIGE</small></button><button type="button" class="swatch" data-color="WHITE" aria-label="สีขาว"><span style="background:#f8f8f4"></span><small>WHITE</small></button><button type="button" class="swatch" data-color="BLACK" aria-label="สีดำ"><span style="background:#1c1c1c"></span><small>BLACK</small></button></div>
+        <div class="choice-label"><span>02 / CHOOSE SIZE</span><button type="button" id="open-size" class="text-link">SIZE GUIDE ↗</button></div><div class="sizes" role="group" aria-label="เลือกไซซ์"><button type="button" class="size-btn" data-size="S">S</button><button type="button" class="size-btn selected" data-size="M">M</button><button type="button" class="size-btn" data-size="L">L</button><button type="button" class="size-btn" data-size="XL">XL</button></div>
+        <div class="size-desc" id="size-desc">รอบอก 44″ / ยาว 27.5″</div>
+        <div class="purchase-line"><div><span class="small-grey">PRICE</span><div class="current-price" id="current-price">฿390</div></div><div class="qty-control" aria-label="จำนวนสินค้า"><button type="button" id="qty-minus" aria-label="ลดจำนวน">−</button><span id="quantity-label">01</span><button type="button" id="qty-plus" aria-label="เพิ่มจำนวน">+</button></div></div>
+        <button type="button" class="primary-btn" id="add-bag"><span>ADD TO BAG</span><span>↗</span></button><button type="button" class="secondary-btn" id="order-now">PRE-ORDER VIA LINE ↗</button><p class="micro-copy">ผลิตตามออเดอร์ · จำนวนรวม 50 ตัว · ค่าจัดส่ง 50 บาท/ออเดอร์</p>
+        </div><div class="panel-bottom"><span>FREEDOM IN EVERY THREAD.</span><span>© KITTI 2026</span></div>
+      </aside>
+    </section>
+    <div class="ticker" aria-hidden="true"><div>THE FIRST DROP ✦ MORE THAN A T-SHIRT ✦ กิตติฯ / KITTI ✦ LIMITED 50 PIECES ✦ MUSIC · MEMORY · REBIRTH ✦ THE FIRST DROP ✦ MORE THAN A T-SHIRT ✦ กิตติฯ / KITTI ✦ LIMITED 50 PIECES ✦ </div></div>
+    <section class="story-section" id="story"><div class="section-index"><span>02 / THE STORY</span><span>BEHIND THE ARTWORK</span></div><div class="story-grid"><div class="story-left"><h2>FROM THE<br/>DARKNESS,<br/><em>TO THE LIGHT.</em></h2><p class="story-lead">เรื่องราวบางเรื่อง ไม่ได้ถูกเล่าผ่านเสียงเพลงเท่านั้น</p><p>ในช่วงหนึ่งของชีวิตที่เต็มไปด้วยความสับสนและความทุกข์ ความฝันถึงการรดน้ำเท้ารูปปั้นพระสังกัจจายน์ กลายเป็นจุดเริ่มต้นของการค้นหาความหมายบางอย่างในชีวิต</p><p>จากสิ่งที่ไม่เคยรู้จัก นำไปสู่การเรียนรู้ การปล่อยวาง และการมองเห็นหนทางใหม่อีกครั้ง</p><p>ลวดลายบนเสื้อรุ่นแรกนี้จึงไม่ใช่เพียงภาพวาด แต่เป็นบันทึกของช่วงเวลา ความทรงจำ และการเริ่มต้นใหม่ที่เราอยากส่งต่อ</p><div class="story-sign">กิตติฯ / KITTI <span>— THE FIRST DROP</span></div></div><div class="story-right"><div class="story-photo"><img src="assets/beige-front.jpg" alt="ลายสกรีนด้านหน้า เสื้อกิตติฯ สีเบจ" loading="lazy"/><span>FIG. 01 / FRONT ARTWORK</span></div><div class="story-photo back"><img src="assets/beige-back.jpg" alt="ลายสกรีนด้านหลัง เสื้อกิตติฯ สีเบจ" loading="lazy"/><span>FIG. 02 / BACK ARTWORK</span></div></div></div></section>
+    <section class="details-section" id="details"><div class="section-index dark-line"><span>03 / PRODUCT SPECIFICATIONS</span><span>KNOW YOUR FIT</span></div><div class="details-grid"><div><h2>THE FIT.</h2><p>OVERSIZED 90S · 100% COTTON</p><p class="details-description">เสื้อทรงใหญ่กว่ามาตรฐาน แนะนำให้วัดรอบอกและความยาวเสื้อตัวที่ใส่อยู่แล้วเทียบกับตารางนี้ก่อนสั่งซื้อ</p><div class="fact-grid"><div><span>FABRIC</span><b>100% COTTON</b></div><div><span>STYLE</span><b>90S OVERSIZED</b></div><div><span>COLORS</span><b>03</b></div><div><span>LIMIT</span><b>50 PIECES</b></div></div></div><div><table class="size-table"><thead><tr><th>SIZE</th><th>CHEST / IN</th><th>LENGTH / IN</th><th>PRICE</th></tr></thead><tbody><tr><td>S</td><td>40″</td><td>26.5″</td><td>฿390</td></tr><tr><td>M</td><td>44″</td><td>27.5″</td><td>฿390</td></tr><tr><td>L</td><td>48″</td><td>29.5″</td><td>฿420</td></tr><tr><td>XL</td><td>52″</td><td>30.5″</td><td>฿450</td></tr></tbody></table><p class="size-footnote">* หน่วยนิ้ว · S ใกล้เคียง L ทั่วไป / M ใกล้เคียง XL / L ใกล้เคียง XXL ทั้งนี้ควรยึดตารางวัดจริงเป็นหลัก</p><a href="#collection" class="outline-cta">EXPLORE THE COLLECTION <span>↗</span></a></div></div></section>
+    <section class="ending"><span>THE FIRST DROP / 001</span><h2>WEAR THE STORY.</h2><p>จำนวนจำกัด 50 ตัว ผลิตตามสีและไซซ์ที่สั่ง</p><a href="#collection">SHOP THE COLLECTION ↗</a></section>
+  </main>
+  <footer class="footer"><div class="footer-brand">กิตติฯ <small>KITTI / 001</small></div><div><a href="#story">THE STORY</a><a href="#details">SIZE GUIDE</a><a id="line-footer" href="https://line.me/R/ti/p/%40kitti" target="_blank" rel="noopener">LINE OA ↗</a></div><span>© 2026 KITTI. ALL RIGHTS RESERVED.</span></footer>
+  <button class="mobile-bag" type="button" data-open-cart>VIEW BAG (<span id="mobile-count">0</span>) <span>↗</span></button>
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-modal="true" role="dialog" aria-labelledby="cart-title" hidden><div class="drawer-header"><span>YOUR BAG / 001</span><button type="button" data-close-drawer aria-label="ปิดตะกร้า">✕</button></div><h2 id="cart-title">PRE-ORDER.</h2><p class="drawer-sub">ตรวจสอบรายการก่อนส่งข้อความไปที่ LINE OA</p><div id="cart-items" class="cart-items"></div><div class="cart-totals"><div><span>SUBTOTAL</span><strong id="subtotal-text">฿0</strong></div><div><span>SHIPPING / ORDER</span><strong>฿50</strong></div><div class="total-row"><span>TOTAL</span><strong id="total-text">฿0</strong></div></div><div class="customer-fields"><label>ชื่อผู้รับสินค้า <input id="customer-name" autocomplete="name" placeholder="ชื่อ-นามสกุล"/></label><label>เบอร์โทรศัพท์ <input id="customer-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="เบอร์ติดต่อ"/></label><label>ที่อยู่จัดส่ง <textarea id="customer-address" autocomplete="street-address" placeholder="บ้านเลขที่ ถนน ตำบล อำเภอ จังหวัด รหัสไปรษณีย์" rows="3"></textarea></label></div><div class="checkout-buttons"><button class="primary-btn" type="button" id="checkout-line">OPEN ORDER IN LINE ↗</button><button class="secondary-btn" type="button" id="copy-order">COPY ORDER TEXT</button><p id="checkout-status" role="status"></p><p class="checkout-note">* จะเปิด LINE OA พร้อมข้อความออเดอร์ให้ตรวจสอบและกดส่งอีกครั้ง การกดปุ่มนี้ยังไม่ถือว่าร้านยืนยันออเดอร์</p></div></aside>
+  <div class="modal" id="size-modal" role="dialog" aria-modal="true" aria-labelledby="size-title" hidden><div class="modal-panel"><div class="modal-header"><span>FIT GUIDE / 001</span><button id="close-size" type="button">✕</button></div><h2 id="size-title">FIND YOUR FIT.</h2><p>ขนาดเสื้อทรง OVERSIZE (หน่วยนิ้ว)</p><table class="size-table"><thead><tr><th>SIZE</th><th>CHEST</th><th>LENGTH</th><th>PRICE</th></tr></thead><tbody><tr><td>S</td><td>40″</td><td>26.5″</td><td>฿390</td></tr><tr><td>M</td><td>44″</td><td>27.5″</td><td>฿390</td></tr><tr><td>L</td><td>48″</td><td>29.5″</td><td>฿420</td></tr><tr><td>XL</td><td>52″</td><td>30.5″</td><td>฿450</td></tr></tbody></table><p>แนะนำเทียบรอบอกและความยาวกับเสื้อตัวที่ใส่สบายก่อนสั่งซื้อ สินค้าพรีออเดอร์ควรตรวจสอบไซซ์ให้แน่ใจ</p></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+  <script type="module" src="three-stage.js"></script>
+</body>
+</html>
